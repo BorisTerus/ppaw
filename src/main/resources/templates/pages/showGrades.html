@@ -1,0 +1,37 @@
+<html style="position: relative; min-height: 100%;" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+
+	<th:block th:include="fragments/menu :: menu"></th:block>
+<div class="w3-container">
+  <h2>Operatii efectuate cu produsele din Magazie</h2>
+							<table  style="width: auto;" class="table table-hover table-bordered" >
+							 <thead>
+									<tr class="table-primary">
+										   <th>Student</th>
+										   <th>Operatie</th>
+										   <th>Produs</th>
+										   <th>Cantitate</th>
+										   <th>Firma</th>
+										   <th>Oras</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="g : ${Grades}">
+										<td th:text="${g.student}" />
+										<td th:text="${g.course}" />
+									</tr>	
+								</tbody>
+							</table>
+</div>
+		<th:block th:include="fragments/footer :: footer"></th:block>
+	</body>
+</html>

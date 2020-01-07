@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<div th:fragment="menu">
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-blue">
+        <div class="container">
+            <H2>Registru Online</H2>
+        </div>
+    </nav>
+    <br>
+    <div class="bara">
+        <a th:href="@{/insertGrade}" class="list-group-item"
+           th:classappend="${#httpServletRequest.getRequestURI() == 'insertGrade' ? 'active':''}">Înregistrarea unei
+            note</a>
+        <a th:href="@{/getStudentGrades}" class="list-group-item"
+           th:classappend="${#httpServletRequest.getRequestURI() == 'getStudentGrades' ? 'active':''}">Note student</a>
+        <a th:href="@{/getCourseGrades}" class="list-group-item"
+           th:classappend="${#httpServletRequest.getRequestURI() == 'getCourseGrades' ? 'active':''}">Note
+            disciplină</a>
+    </div>
+</div>
+
+</body>
+</html>
