@@ -22,7 +22,7 @@
         </thead>
         <tbody>
         <tr th:each="s : ${Students}">
-            <td th:text="${s.firstName}"/>
+            <td th:text="|${s.firstName} ${s.lastName}|"/>
             <td th:each="g:*{s.grades}" th:text="${g.grade}"></td>
         </tr>
         </tbody>
