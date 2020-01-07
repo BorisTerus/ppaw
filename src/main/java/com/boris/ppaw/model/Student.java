@@ -29,4 +29,7 @@ public class Student {
             joinColumns = {@JoinColumn(name = "student_id")},
             inverseJoinColumns = {@JoinColumn(name = "course_id")})
     private Set<Course> studentSet = new HashSet<>();
+
+    @OneToMany(mappedBy = "student")
+    private Set<Grade> grades;
 }

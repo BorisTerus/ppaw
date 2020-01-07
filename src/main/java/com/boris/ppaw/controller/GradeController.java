@@ -58,6 +58,8 @@ public class GradeController {
     @GetMapping(value = "/showGrades")
     public String showGrades(Model model) {
         model.addAttribute("Title", "Afisare operatii");
+        model.addAttribute("Courses", courseRepository.findAll());
+        model.addAttribute("Students", studentRepository.findAll());
         model.addAttribute("Grades", gradeService.getAllGrades());
         return "pages/showGrades";
     }

@@ -15,6 +15,8 @@
         <a th:href="@{/insertGrade}" class="list-group-item"
            th:classappend="${#httpServletRequest.getRequestURI() == 'insertGrade' ? 'active':''}">Înregistrarea unei
             note</a>
+        <a th:href="@{/showGrades}" class="list-group-item"
+           th:classappend="${#httpServletRequest.getRequestURI() == 'showGrades' ? 'active':''}">Afişare catalog</a>
         <a th:href="@{/getStudentGrades}" class="list-group-item"
            th:classappend="${#httpServletRequest.getRequestURI() == 'getStudentGrades' ? 'active':''}">Note student</a>
         <a th:href="@{/getCourseGrades}" class="list-group-item"
